@@ -40,7 +40,7 @@ public class CustomerServiceTest {
     @Test
     public void getCustomerWhichDoesNotExists() {
         Exception exception = Assert.assertThrows(NotFoundException.class, () -> {
-            customerService.getById(1);
+            customerService.getById(99);
         });
 
         String expectedMessage = "There isn`t such user";

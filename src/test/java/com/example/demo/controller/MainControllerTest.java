@@ -46,7 +46,7 @@ public class MainControllerTest {
 
     @Test
     public void getCostumerByIdWhichDoesntExists() throws Exception {
-        this.mockMvc.perform(get("/home/2"))
+        this.mockMvc.perform(get("/home/99"))
                 .andDo(print())
                 .andExpect(status().is4xxClientError())
                 .andExpect(content()
